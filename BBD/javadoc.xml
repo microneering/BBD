@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" additionalparam="-J-Xmx180m " author="true" classpath="lib/jaxb1-impl.jar;lib/sqljdbc.jar;lib/activation.jar;lib/junit-4.1.jar;lib/jaxb-api.jar;lib/jaxb-impl.jar;lib/jsr173_1.0_api.jar;lib/mysql-connector-java-5.0.4-bin.jar" destdir="docs/Javadoc" doctitle="Black Box Database" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="bbdSwing" source="1.6" sourcefiles="src/bbd/package-info.java,src/bbd/BBDAPI.java,src/bbd/BBDConnection.java,src/bbd/BBDUnitTestRow.java,src/bbd/BBDParameterMetaData.java,src/bbd/BBDValidator.java,src/bbd/BBDRowArrayList.java,src/bbd/BBDDefaultRow.java,src/bbd/BBDBeanConnection.java,src/bbd/BBDBroker.java,src/bbd/BBDBeanArrayList.java,src/bbd/BBDBeanAPI.java,src/bbd/BBDRegEx.java,src/bbd/BBDDefaultField.java,src/bbd/BBDUnitTestCase.java,src/bbd/BBDAPIPrincipal.java,src/bbd/BBDRefreshTimerTask.java,src/bbd/BBDProperties.java,src/bbd/BBDUnitTestAPI.java,src/bbd/BBDField.java,src/bbd/BBDColumn.java,src/bbd/BBDRow.java" sourcepath="src;test" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

@@ -1,0 +1,20 @@
+Here are notes to get a BBD loaded into a blank MySQL installation.
+
+The 'backup bbd.sql' was created using the 
+Windows MySQL administrator tool's backup option.
+
+Use the MySQL administrator tool's restore option to read this file 
+and create a demo datbases.
+
+Log off and log on the MySQL administrator tool and all databases, uses,
+and access privs should appear.
+
+Now run the unit tests on the following projects
+
+BBD
+BBDAdmin
+BBDDemoApplication
+BBDJPA
+
+If all units test pass, then you can run BBDAdmin, BBDDemoApplication, or BBDJPAAdmin programs.
+

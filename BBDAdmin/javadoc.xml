@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" additionalparam="-J-Xmx180m " author="true" classpath="../BBD/build;../BBD/lib/jaxb1-impl.jar;../BBD/lib/sqljdbc.jar;../BBD/lib/activation.jar;../BBD/lib/junit-4.1.jar;../BBD/lib/jaxb-api.jar;../BBD/lib/jaxb-impl.jar;../BBD/lib/jsr173_1.0_api.jar;../BBD/lib/mysql-connector-java-5.0.4-bin.jar" destdir="docs" doctitle="BBD Adimn" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="admin.broker,admin" source="1.6" sourcepath="src;test" splitindex="true" use="true" version="true"/>
+    </target>
+</project>
