@@ -2,7 +2,7 @@
 
 ###### Written by James Gamber
 
-BBD is a Java library that provides an abstract, opaque API for interfacing with SQL databases securely in enterprise conditions
+BBD is a Java library that provides a Java API for interfacing with SQL databases securely in enterprise conditions
 
 Please read the book under [BBD/docs/BBD.pdf](https://github.com/microneering/BBD/blob/master/BBD/docs/BBD.pdf)
 
