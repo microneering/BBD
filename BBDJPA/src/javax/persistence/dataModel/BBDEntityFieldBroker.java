@@ -25,16 +25,15 @@ package javax.persistence.dataModel;
  * 
  * bbdjpaadmin/BBDEntityFieldBroker.java
  */
+import bbd.BBDAbstractFactory;
+import bbd.BBDBeanArrayList;
+import bbd.IBBDAPIPrincipal;
+import bbd.IBBDBeanAPI;
+import bbd.IBBDBeanBroker;
+import bbd.IBBDBeanConnection;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Logger;
-
-import bbd.BBDAbstractFactory;
-import bbd.IBBDBeanAPI;
-import bbd.BBDBeanArrayList;
-import bbd.IBBDAPIPrincipal;
-import bbd.IBBDBeanBroker;
-import bbd.IBBDBeanConnection;
 
 /**
  * Broker to control model for entity fields
@@ -50,7 +49,7 @@ public class BBDEntityFieldBroker<B extends EntityFieldBean, L extends BBDBeanAr
      * Keys used to find the Java Class Persist SQL
      */
     private final IBBDBeanAPI SELECT = BBDAbstractFactory.makeBBDBeanAPI("persist", "getEntityFields", EntityFieldBean.class);
-    private final IBBDBeanAPI SELECTALL = BBDAbstractFactory.makeBBDBeanAPI("persist", "getEntityFields", EntityFieldBean.class);
+    private final IBBDBeanAPI SELECTALL = BBDAbstractFactory.makeBBDBeanAPI("persist", "getFields", EntityFieldBean.class);
     private final IBBDBeanAPI UPDATE = BBDAbstractFactory.makeBBDBeanAPI("persist", "updateEntityField", EntityFieldBean.class);
     protected IBBDAPIPrincipal userAccess = BBDAbstractFactory.makeBBDPrincipal("?", "?");
 
@@ -66,10 +65,12 @@ public class BBDEntityFieldBroker<B extends EntityFieldBean, L extends BBDBeanAr
 
         SELECT.setBbdPrincipal(userAccess);
 
+        @SuppressWarnings( "unchecked" )
         final IBBDBeanConnection<B, L> myConnection = BBDAbstractFactory.makeBBDBeanConnection();
+        @SuppressWarnings( "unchecked" )
         L list = (L) new BBDBeanArrayList<B>();
         try {
-            list = (L) myConnection.executeQuery(SELECT, row.getEntityId());
+            list = myConnection.executeQuery(SELECT, row.getBbdjpaobjectId());
         } catch (final SQLException e) {
             log.severe(e.toString());
         }

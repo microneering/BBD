@@ -6,14 +6,12 @@
 package javax.persistence.dataModel;
 
 import bbd.BBDBeanArrayList;
-import javax.persistence.BBDEntityManager;
-import javax.persistence.EntityManager;
 import org.junit.After;
 import org.junit.AfterClass;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -51,9 +49,10 @@ public class BBDEntityFieldBrokerTest<B extends EntityFieldBean, L extends BBDBe
         System.out.println("select");
 
         B row = (B)new EntityFieldBean();
-        row.setEntityId(Long.valueOf(3));
+        row.setBbdjpaobjectId(Long.valueOf(3));
         
-        BBDEntityFieldBroker instance = new BBDEntityFieldBroker();
+        BBDEntityFieldBroker<EntityFieldBean, BBDBeanArrayList<EntityFieldBean>> instance = 
+                        new BBDEntityFieldBroker<>();
         instance.setPrincipal("bbd", "bbd");
         L result = (L)instance.select(row);
         assertNotNull(result);

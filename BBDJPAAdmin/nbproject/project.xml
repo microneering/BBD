@@ -6,23 +6,15 @@
             <name>BBDJPAAdmin</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <source-roots>
-                <root id="src.dir"/>
+                <root id="src.src.dir"/>
             </source-roots>
             <test-roots>
-                <root id="test.src.dir"/>
+                <root id="test.test.dir"/>
             </test-roots>
         </data>
         <references xmlns="http://www.netbeans.org/ns/ant-project-references/1">
             <reference>
                 <foreign-project>BBD</foreign-project>
-                <artifact-type>jar</artifact-type>
-                <script>build.xml</script>
-                <target>jar</target>
-                <clean-target>clean</clean-target>
-                <id>jar</id>
-            </reference>
-            <reference>
-                <foreign-project>BBDDemoApplication</foreign-project>
                 <artifact-type>jar</artifact-type>
                 <script>build.xml</script>
                 <target>jar</target>
@@ -38,8 +30,5 @@
                 <id>jar</id>
             </reference>
         </references>
-        <swingapp xmlns="http://www.netbeans.org/ns/form-swingapp/1">
-            <application-class name="bbdjpaadmin.BBDJPAAdminApp"/>
-        </swingapp>
     </configuration>
 </project>

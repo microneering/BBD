@@ -1,10 +1,31 @@
 Here are notes to get a BBD loaded into a blank MySQL installation.
 
 The 'backup bbd.sql' was created using the 
-Windows MySQL administrator tool's backup option.
+Windows MySQL work bench version 8 tool's backup option.
 
 Use the MySQL administrator tool's restore option to read this file 
 and create a demo datbases.
+
+Three users must be created with the following grants
+
+user password   from Host
+==== =======    =========
+bbd  bbd            %
+test test           %
+Duke Java           %
+
+These grants are required
+
+user   db schema  grant
+=====  =========  ==========
+bbd    bbd        execute
+bbd    persist    execute
+Duke   bbd        execute
+Duke   test       execute,select
+test   bbd        execute
+test   test       execute
+
+
 
 Log off and log on the MySQL administrator tool and all databases, uses,
 and access privs should appear.

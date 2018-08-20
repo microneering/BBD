@@ -121,7 +121,7 @@ public class CreateBean {
     static public void setFieldValues(final Object instance) {
 
         EntityFieldBean efBean = new EntityFieldBean();
-        efBean.setEntityId(Long.valueOf(getIDFieldValue(instance)));
+        efBean.setBbdjpaobjectId(Long.valueOf(getIDFieldValue(instance)));
 
         BBDEntityFieldBroker efBroker = new BBDEntityFieldBroker();
         efBroker.setPrincipal(persistUser, persistPassword);

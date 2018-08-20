@@ -161,6 +161,7 @@ public class BBDBeanJTable<B extends List, L extends BBDBeanArrayList<B>> extend
 
     private int populateFromList(final L al) throws IllegalArgumentException, SecurityException {
 
+        originalValues = al;
         final BBDDefaultTableModel dtm = new BBDDefaultTableModel(0, al.getColumnNames().length);
         setModel(dtm);
 

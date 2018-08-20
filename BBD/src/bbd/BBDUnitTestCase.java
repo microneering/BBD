@@ -26,8 +26,8 @@ package bbd;
  * BBD/bbd/BBDUnitTestCase.java
  */
 
+import java.sql.Date;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -156,7 +156,7 @@ public abstract class BBDUnitTestCase<R extends IBBDRow<IBBDField>,
 		BBDConnection<R, L> conn = new BBDConnection<>();
 
 		try {
-			conn.executeUpdate(api, getTestMethod(), new Timestamp(startTime), stopTime-startTime,
+			conn.executeUpdate(api, getTestMethod(), new Date(startTime), stopTime-startTime,
 					getSelectedRows(), getDeletedRows(), getUpdatedRows(),
 					getInsertedRows());
 		} catch (SQLException e) {

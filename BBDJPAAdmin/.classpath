@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="src" path="test"/>
+    <classpathentry kind="src" path="src"/>
+    <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+    <classpathentry combineaccessrules="false" kind="src" path="/BBD"/>
+    <classpathentry kind="lib" path="/BBD/lib/sqljdbc.jar"/>
+    <classpathentry kind="lib" path="/BBD/lib/mysql-connector-java-5.0.4-bin.jar"/>
+    <classpathentry kind="output" path="build"/>
+</classpath>

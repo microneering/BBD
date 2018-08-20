@@ -831,7 +831,7 @@ class BBDBeanConnection<B, L extends BBDBeanArrayList<B>> implements IBBDBeanCon
 
             try {
                 stmt = getConnection( principal ).createStatement();
-                stmt.execute( "use " + api.getDatabaseUsed() + ";" );
+                stmt.execute( "use `" + api.getDatabaseUsed() + "`;" );
             } finally {
 
                 if( stmt != null ) {
