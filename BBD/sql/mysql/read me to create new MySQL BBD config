@@ -39,3 +39,15 @@ BBDJPA
 
 If all units test pass, then you can run BBDAdmin, BBDDemoApplication, or BBDJPAAdmin programs.
 
+
+NOTE: On Linux it is required to make database queries case insensitive and explicitly set the timezone. Add the following to /etc/mysql/my.conf
+
+````
+[mysqld]
+default-time-zone='America/Los_Angeles'
+lower_case_table_names=1
+````
+
+also run the following command in a user terminal to import the timezone data into SQL:
+
+mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p mysql
